@@ -4,6 +4,7 @@ import ListCard from "./ListCard";
 export default function QuestionList({
   combinedQuestions,
   onQuestionList,
+  onCreateNew,
   onStartOver,
 }) {
   return (
@@ -11,10 +12,15 @@ export default function QuestionList({
       <div>
         <h1>Select a Question List or Create New</h1>
       </div>
+
       <div>
-        <CreateNew />
+        <CreateNew
+          onCreateNew={onCreateNew}
+          combinedQuestions={combinedQuestions}
+          onStartOver={onStartOver}
+        />
       </div>
-      {console.log(combinedQuestions)}
+
       <div className="flashcards">
         {combinedQuestions.map((qarray) => (
           <ListCard

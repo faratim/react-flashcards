@@ -1,13 +1,20 @@
 import "../styles.css";
 import { FlashCards } from "./FlashCards";
+import NewListInput from "./NewListInput";
 import QuestionList from "./QuestionList";
 import { useState } from "react";
 
 export default function App() {
   const [questionList, setQuestionList] = useState([]);
+  const [createNew, setCreateNew] = useState(false);
 
   function startOver() {
     setQuestionList([]);
+    setCreateNew(false);
+  }
+
+  if (createNew) {
+    return <NewListInput onStartOver={startOver} />;
   }
 
   return (
@@ -16,6 +23,7 @@ export default function App() {
         <QuestionList
           combinedQuestions={combinedQuestions}
           onQuestionList={setQuestionList}
+          onCreateNew={setCreateNew}
         />
       ) : (
         <FlashCards questionList={questionList} onStartOver={startOver} />
