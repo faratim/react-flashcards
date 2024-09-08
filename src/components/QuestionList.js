@@ -1,0 +1,30 @@
+import CreateNew from "./CreateNew";
+import ListCard from "./ListCard";
+
+export default function QuestionList({
+  combinedQuestions,
+  onQuestionList,
+  onStartOver,
+}) {
+  return (
+    <>
+      <div>
+        <h1>Select a Question List or Create New</h1>
+      </div>
+      <div>
+        <CreateNew />
+      </div>
+      {console.log(combinedQuestions)}
+      <div className="flashcards">
+        {combinedQuestions.map((qarray) => (
+          <ListCard
+            name={qarray[0].listName}
+            key={qarray[0].listId}
+            questions={qarray}
+            onQuestionList={onQuestionList}
+          />
+        ))}
+      </div>
+    </>
+  );
+}
