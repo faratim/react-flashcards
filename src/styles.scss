@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  padding: 20px;
+  background-color: #ecddff;
+  color: #363c40;
+}
+
+#create-new-button {
+  border: 1px solid #e7e7e7;
+  background-color: #ffe3d2;
+  width: 100%;
+  height: 3em;
+  margin: 0 0 1.5em 0;
+  transition: linear 0.2s;
+  border-radius: 7px;
+  font-size: 2em;
+  font-family: "Nunito", sans-serif;
+  color: #363c40;
+}
+
+#create-new-button:hover {
+  background-color: darken(#ffe3d2, 10%);
+  cursor: pointer;
+}
+
+.flashcards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+
+  & > div {
+    border: 1px solid #e7e7e7;
+    border-radius: 7px;
+    aspect-ratio: 2 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    cursor: pointer;
+    transition: linear 0.2s;
+    font-size: 2em;
+    background-color: lighten(#fff2ae, 15%);
+
+    &:hover {
+      background-color: #fff2ae;
+    }
+  }
+}
+
+.question-list-card:hover {
+  background-color: purple;
+}
+
+div.selected {
+  border: 1px solid #cffff6;
+  background-color: #cffff6;
+  color: #363c40;
+  font-weight: bold;
+}
+
+div.selected:hover {
+  background-color: darken(#cffff6, 10%);
+}
+
+#start-over-button {
+  border: 1px solid #e7e7e7;
+  background-color: #ffe3d2;
+  width: 100%;
+  height: 2.5em;
+  margin: 1em 0 1.5em 0;
+  transition: linear 0.2s;
+  border-radius: 7px;
+  font-size: 2em;
+  font-family: "Nunito", sans-serif;
+  color: #363c40;
+}
+
+#start-over-button:hover {
+  background-color: darken(#ffe3d2, 10%);
+  cursor: pointer;
+}

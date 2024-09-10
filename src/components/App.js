@@ -1,4 +1,4 @@
-import "../styles.css";
+import "../styles.scss";
 import { FlashCards } from "./FlashCards";
 import NewListInput from "./NewListInput";
 import QuestionList from "./QuestionList";

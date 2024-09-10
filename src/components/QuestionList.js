@@ -10,7 +10,7 @@ export default function QuestionList({
   return (
     <>
       <div>
-        <h1>Select a Question List or Create New</h1>
+        <h1>Select a Flashcard Set or Create New</h1>
       </div>
 
       <div>
