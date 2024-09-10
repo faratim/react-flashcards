@@ -7,6 +7,11 @@ import { useState } from "react";
 export default function App() {
   const [questionList, setQuestionList] = useState([]);
   const [createNew, setCreateNew] = useState(false);
+  const [combinedQuestions, setCombinedQuestions] = useState([
+    questions1,
+    questions2,
+    questions3,
+  ]);
 
   function startOver() {
     setQuestionList([]);
@@ -14,7 +19,13 @@ export default function App() {
   }
 
   if (createNew) {
-    return <NewListInput onStartOver={startOver} />;
+    return (
+      <NewListInput
+        onStartOver={startOver}
+        combinedQuestions={combinedQuestions}
+        setCombinedQuestions={setCombinedQuestions}
+      />
+    );
   }
 
   return (
@@ -171,4 +182,4 @@ export const questions3 = [
   },
 ];
 
-export const combinedQuestions = [questions1, questions2, questions3];
+// export const combinedQuestions = [questions1, questions2, questions3];
