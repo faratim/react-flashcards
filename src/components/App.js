@@ -51,7 +51,7 @@ export const questions1 = [
   },
   {
     id: 1297,
-    question: "8 x 4",
+    question: "*8 x 4",
     answer: "32",
   },
   {
@@ -76,7 +76,7 @@ export const questions1 = [
   },
   {
     id: 2005,
-    question: "6 x 4",
+    question: "*6 x 4",
     answer: "24",
   },
   {
@@ -86,7 +86,7 @@ export const questions1 = [
   },
   {
     id: 2007,
-    question: "4 x 8",
+    question: "*4 x 8",
     answer: "32",
   },
   {
@@ -96,7 +96,7 @@ export const questions1 = [
   },
   {
     id: 2009,
-    question: "4 x 6",
+    question: "*4 x 6",
     answer: "24",
   },
 ];
